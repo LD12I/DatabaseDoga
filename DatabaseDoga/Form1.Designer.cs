@@ -36,6 +36,7 @@ namespace DatabaseDoga
             this.AddItemB = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteItemB = new Guna.UI2.WinForms.Guna2Button();
             this.ReloadB = new Guna.UI2.WinForms.Guna2Button();
+            this.Info = new Guna.UI2.WinForms.Guna2CircleButton();
             this.SuspendLayout();
             // 
             // ProductsListB
@@ -165,12 +166,29 @@ namespace DatabaseDoga
             this.ReloadB.TabIndex = 7;
             this.ReloadB.Text = "Reload Items";
             // 
+            // Info
+            // 
+            this.Info.Animated = true;
+            this.Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Info.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Info.ForeColor = System.Drawing.Color.White;
+            this.Info.Location = new System.Drawing.Point(481, 292);
+            this.Info.Name = "Info";
+            this.Info.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Info.Size = new System.Drawing.Size(35, 35);
+            this.Info.TabIndex = 8;
+            this.Info.Text = "I";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(533, 450);
+            this.Controls.Add(this.Info);
             this.Controls.Add(this.ReloadB);
             this.Controls.Add(this.DeleteItemB);
             this.Controls.Add(this.AddItemB);
@@ -192,6 +210,7 @@ namespace DatabaseDoga
         private Guna.UI2.WinForms.Guna2Button AddItemB;
         private Guna.UI2.WinForms.Guna2Button DeleteItemB;
         private Guna.UI2.WinForms.Guna2Button ReloadB;
+        private Guna.UI2.WinForms.Guna2CircleButton Info;
     }
 }
 

@@ -32,17 +32,32 @@ namespace DatabaseDoga
             {
                 if (NameTB.ToString().Length > 0 && PriceTB.ToString().Length > 0 && QuantityTB.ToString().Length > 0)
                 {
-                    item oneItem = new item();
-                    oneItem.name = NameTB.Text;
-                    oneItem.price = Convert.ToInt32(PriceTB.Text);
-                    oneItem.quantity = Convert.ToInt32(QuantityTB.Text);
-                    db.insertOneItem(oneItem);
+                    try
+                    {
+                        item oneItem = new item();
+                        oneItem.name = NameTB.Text;
+                        oneItem.price = Convert.ToInt32(PriceTB.Text);
+                        oneItem.quantity = Convert.ToInt32(QuantityTB.Text);
+                        db.insertOneItem(oneItem);
+                    }
+                    catch (Exception h)
+                    {
+
+                        MessageBox.Show("error name missing");
+                    }
+                   
                 }
                 else
                 {
                     MessageBox.Show("Name, or Price, or Quantity missing");
                 }
             };
+
+            Info.Click += (s, e) =>
+            {
+                MessageBox.Show("Ha két ugyanolyan nevő elem van mindkettőt kitörli so nem kell kiópróbálni");
+            };
+
 
             ReloadB.Click += (s, e) =>
             {
